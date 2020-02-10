@@ -57,6 +57,8 @@ export function getPuppeteer(config) {
     case 'firefox':
       // eslint-disable-next-line global-require, import/no-dynamic-require, import/no-extraneous-dependencies
       return require('puppeteer-firefox')
+    case 'extra':
+      return require('puppeteer-extra')
     default:
       throw new Error(
         `Error: "browser" config option is given an unsupported value: ${browser}`,
